@@ -15,6 +15,6 @@ You can compile the individual files locally with docker (and docker compose) wi
 git clone https://github.com/timzolleis/hfu-ain-1-programming.git
 ```
 
-**Step 2: Run the database server**
+**Step 2: Compile files**
 Coming soon
 
