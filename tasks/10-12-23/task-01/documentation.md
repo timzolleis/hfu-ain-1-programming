@@ -29,7 +29,7 @@ minimum = list[0];
 
 ```c++
   int arrayLength = 2
-int list[arrayLength - 1];
+int list[arrayLength];
 ```
 
 #### Error message
@@ -74,7 +74,7 @@ maximum = list[i];
 
 ````c++
 int arrayLength = 40;
-int list[arrayLength - 1];
+int list[arrayLength];
 printf("\n ===== %i =====", list[54]);
 ````
 
