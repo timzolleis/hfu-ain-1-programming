@@ -27,6 +27,9 @@ int main(int argc, char *argv[]) {
     int minimum;
     int maximum;
     int i;
+    unsigned long long sizeOfList = sizeof(list) / list[0];
+
+
 
     //Fill the list with 20 random elements
     for (i = 0; i < arrayLength; i++) {
