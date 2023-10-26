@@ -4,19 +4,19 @@
 #include <cstdio>
 
 void printInteger(int value) {
-    printf("the int is now %i", value);
+    printf("the int is now %i \n", value);
 }
 
 void printFloat(float value) {
-    printf("the float is now %f", value);
+    printf("the float is now %f \n", value);
 }
 
 void printChar(char value) {
-    printf("the char is now %c", value);
+    printf("the char is now %c \n", value);
 }
 
 void printBool(bool value) {
-    printf("the boolean is now %b", value);
+    printf("the boolean is now %b \n", value);
 }
 
 void integers() {
@@ -27,7 +27,7 @@ void integers() {
     printInteger(n);
     n = (17 - 2) * ((7 + 9) % 6);
     printInteger(n);
-    n = 17 - (2 * (7 + (9 & 6)));
+    n = 17 - (2 * (7 + (9 % 6)));
     printInteger(n);
     n = 17 / (5 / 3) * 4;
     printInteger(n);

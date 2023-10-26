@@ -1,7 +1,7 @@
 //
 // Created by Tim on 19.10.2023.
 //
-#include "stdio.h"
+#include <cstdio>
 
 int main() {
     int x, y;
