@@ -5,9 +5,14 @@
 #include <cstdio>
 #include <string>
 
-void printSize(const std::string& typeName, long long size) {
+void printSize(const std::string &typeName, long long size) {
     printf("%s: == %llu == \n", typeName.c_str(), size);
 }
+
+void printSizeWithCrappyString(char *typeName, long long size) {
+    printf("%s: == %llu == \n", typeName, size);
+}
+
 
 void printDataTypeSize() {
     int i;
