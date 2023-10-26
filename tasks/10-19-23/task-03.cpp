@@ -1,36 +1,35 @@
 //
-// Created by Tim on 19.10.2023.
+// Created by Tim on 26.10.2023.
 //
 
-#include <cstdio>
-#include <string>
 
-void printSize(const std::string& typeName, long long size) {
-    printf("%s: == %llu == \n", typeName.c_str(), size);
-}
-
-void printDataTypeSize() {
+void conversions() {
     int i;
-    printSize("int", sizeof(i));
-    short s;
-    printSize("short", sizeof(s));
-    char c;
-    printSize("char", sizeof(c));
-    long l;
-    printSize("long", sizeof(l));
-    long long ll;
-    printSize("long long", sizeof(ll));
+    long ell;
     float f;
-    printSize("float", sizeof(f));
     double d;
-    printSize("double", sizeof(d));
-    long double ld;
-    printSize("long double", sizeof(ld));
-    bool b;
-    printSize("bool", sizeof(b));
+
+
+    d = 100 / 30;
+    f = d; // 3
+    ell = f; // 3
+    i = ell; //3
+    d = 100 / 3.0;
+    f = d; // one third as a float
+    ell = f; //one third as a long
+    i = ell; // 33
+    d = (float) 100 / 3; // one third as a float
+    f = d; // one third as a float
+    ell = f; // one third as a long
+    i = ell; //33
+    d = 0.1; // one tenth as a double
+    f = d; // one tenth as a float
+    ell = f; //33
+    i = ell; //33
+
 }
 
 int main() {
-    printDataTypeSize();
+    conversions();
     return 0;
 }
