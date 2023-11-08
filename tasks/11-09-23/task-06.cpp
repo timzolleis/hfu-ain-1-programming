@@ -4,7 +4,6 @@
 
 #include <cstdio>
 #include <string>
-#include <string.h>
 #include <algorithm>
 
 bool isEven(int number) {
