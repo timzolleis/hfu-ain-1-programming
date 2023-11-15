@@ -9,7 +9,7 @@
 void fillWithRandomNumbers(int *array, int length) {
     srand(time(0));
     for (int i = 0; i < length; ++i) {
-        array[i] = rand() % 50;
+        array[i] = rand() % 51;
     }
 }
 
