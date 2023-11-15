@@ -3,13 +3,16 @@
 //
 
 #include <cstdio>
+#include <math.h>
 
 int getChar(int number) {
     return number % 2 == 0 ? 0 : 1;
 }
 
 void printBinaryNumber(int number) {
-    int length = 8;
+
+    // Get the number of bits needed for the length of the array
+    int length = ceil(log2(number + 1));
     int array[length];
     int current = number;
     for (int i = 0; i < length; i++) {

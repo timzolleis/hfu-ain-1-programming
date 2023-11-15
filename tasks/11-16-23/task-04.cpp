@@ -10,7 +10,6 @@ int main() {
     char text[size];
     printf("Enter a string...\n");
     scanf("%99s", text);
-
     int length = 0;
     while (text[length] != '\0') {
         length++;

@@ -24,7 +24,6 @@ void printReversedTriangle(){
 }
 
 int main() {
-    printTriangle();
     printReversedTriangle();
     return 0;
 }

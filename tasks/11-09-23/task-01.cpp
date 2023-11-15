@@ -26,7 +26,7 @@ int main() {
 //        printf("%i\n", count);
 //    }
 //    printf("==== LOOP 5 ====\n");
-//    //This will also run forever, since it will never be 15
+//    //This will never, since it will never be 15
 //    for (int count = 1; count == 15; count = count + 3) {
 //        printf("%i\n", count);
 //    }

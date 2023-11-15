@@ -9,31 +9,36 @@
 void fillWithRandomNumbers(int *array, int length) {
     srand(time(0));
     for (int i = 0; i < length; ++i) {
-        array[i] = rand();
+        array[i] = rand() % 50;
     }
 }
 
-//TODO: Is this right?
+void printArray(int *array, int length) {
+    for (int i = 0; i < length; ++i) {
+        printf("%i\n", array[i]);
+    }
+}
+
+
 int main() {
     int length = 100;
     int array[length];
     fillWithRandomNumbers(array, 100);
-    //Now we want to fill for each index, how often that number occurs in the array
-    for (int i = 50; i < 100; i++) {
-        //Count the number of occurences in the first array
-        int occurrences = 0;
-        for (int j = 0; j < 50; j++) {
-            if (array[j] == j) {
-                occurrences++;
+    //Now we count the occurrences
+    int occurrences[51];
+    for (int i = 0; i <= 50; i++) {
+        int sum = 0;
+        for (int j = 0; j < 100; j++) {
+            int arrayNumber = array[j];
+            if (arrayNumber == i) {
+                sum++;
             }
         }
-        array[i] = occurrences;
+        occurrences[i] = sum;
     }
-    //Print the numbers side by side
-    for(int i = 0; i < 50; i++){
-        printf("Number: %i | Occurrences: %i\n", array[i], array[i + 50]);
+    printArray(array, 100);
+    for (int i = 0; i <= 50; i++) {
+        printf("%i: %i\n", i, occurrences[i]);
     }
-
-
 }
 
