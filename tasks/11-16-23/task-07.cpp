@@ -3,6 +3,7 @@
 //
 #include <cstdio>
 #include <ctype.h>
+#include <cstring>
 
 
 bool contains(const char *array, char item) {
@@ -16,7 +17,7 @@ bool contains(const char *array, char item) {
     return false;
 }
 
-bool isVocal(const char *character) {
+bool isVowel(const char *character) {
     char vocals[] = {'a', 'e', 'i', 'o', 'u'};
     return contains(vocals, *character);
 }
@@ -30,16 +31,34 @@ void removeSpaces(char *string) {
     } while (*backup++ != '\0');
 }
 
-void removeVocals(char *input) {
+void removeVowels(char *input) {
     int i = 0;
     while (input[i] != '\0') {
         char lowerCase = tolower(input[i]);
         printf("Lowercase, %c\n", lowerCase);
-        if (isVocal(&lowerCase)) {
+        if (isVowel(&lowerCase)) {
             input[i] = ' ';
         }
         i++;
     }
+}
+
+
+void printWithoutVowels(char *input) {
+    int i = 0;
+    int count = 0;
+    char newCharArray[strlen(input)];
+
+    while (input[i] != '\0') {
+        char character = input[i];
+        char lowerCase = tolower(character);
+        if (!isVowel(&lowerCase)) {
+            newCharArray[count] = character;
+            count++;
+        }
+        i++;
+    }
+    printf("The string without vocals: %s\n", newCharArray);
 }
 
 
@@ -48,10 +67,10 @@ int main() {
     char string1[max];
     printf("Enter a string...\n");
     gets(string1);
-    removeVocals(string1);
-    removeSpaces(string1);
+//    removeVowels(string1);
+//    removeSpaces(string1);
+    printWithoutVowels(string1);
 
-    printf("The string without vocals: %s\n", string1);
 
     return 0;
 }
