@@ -10,7 +10,6 @@ int getChar(int number) {
 }
 
 void printBinaryNumber(int number) {
-
     // Get the number of bits needed for the length of the array
     int length = ceil(log2(number + 1));
     int array[length];

@@ -6,6 +6,28 @@
 #include <cstring>
 
 
+//void removeSpaces(char *string) {
+//    char *backup = string;
+//    do {
+//        //If backup is not a space, copy it to string (at the next position)
+//        if (*backup != ' ')
+//            *string++ = *backup;
+//    } while (*backup++ != '\0');
+//}
+//
+//void removeVowels(char *input) {
+//    int i = 0;
+//    while (input[i] != '\0') {
+//        char lowerCase = tolower(input[i]);
+//        printf("Lowercase, %c\n", lowerCase);
+//        if (isVowel(&lowerCase)) {
+//            input[i] = ' ';
+//        }
+//        i++;
+//    }
+//}
+
+
 bool contains(const char *array, char item) {
     int i = 0;
     while (array[i] != '\0') {
@@ -21,28 +43,6 @@ bool isVowel(const char *character) {
     char vocals[] = {'a', 'e', 'i', 'o', 'u'};
     return contains(vocals, *character);
 }
-
-void removeSpaces(char *string) {
-    char *backup = string;
-    do {
-        //If backup is not a space, copy it to string (at the next position)
-        if (*backup != ' ')
-            *string++ = *backup;
-    } while (*backup++ != '\0');
-}
-
-void removeVowels(char *input) {
-    int i = 0;
-    while (input[i] != '\0') {
-        char lowerCase = tolower(input[i]);
-        printf("Lowercase, %c\n", lowerCase);
-        if (isVowel(&lowerCase)) {
-            input[i] = ' ';
-        }
-        i++;
-    }
-}
-
 
 void printWithoutVowels(char *input) {
     int i = 0;

@@ -15,6 +15,7 @@ int main() {
     for (int i = 0; i < length; i++) {
         reversedString[i] = string1[length - i - 1];
     }
+    reversedString[length] = '\0';
     printf("Your string in the reversed order: %s\n", reversedString);
     return 0;
 }

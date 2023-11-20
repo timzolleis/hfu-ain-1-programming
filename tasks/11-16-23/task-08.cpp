@@ -26,6 +26,7 @@ int main() {
     for (int i = 0; i < string2Length; i++) {
         concatenatedString[string1Length + i] = string2[i];
     }
+    concatenatedString[arrayLength] = '\0';
     printf("The concatenated string is %s\n", concatenatedString);
     return 0;
 }
