@@ -11,7 +11,6 @@ int occurrences(const char *s, const char *m) {
     int mLength = strlen(m);
     for (int i = 0; i < sLength; i++) {
         //We begin if the first character matches
-        printf("s of i, %c", s[i]);
         if (s[i] == m[0]) {
             //We check if the next characters match
             if (mLength - 1 == 1) {
@@ -41,7 +40,7 @@ int main() {
     printf("Enter a pattern...\n");
     fgets(pattern, 80, stdin);
     printf("You entered %s\n", string);
-    printf("The pattern occurs %i times in the string\n", occurrences("Test1", "Test"));
+    printf("The pattern occurs %i times in the string\n", occurrences(string, pattern));
     return 0;
 
 
