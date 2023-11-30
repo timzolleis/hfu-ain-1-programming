@@ -9,7 +9,6 @@ double getFibonacciNumber(int n) {
     } else if (n == 1) {
         return 1;
     }
-
     double result = 0;
     double previous = 0;
     double current = 1;
@@ -24,7 +23,7 @@ double getFibonacciNumber(int n) {
 
 int main() {
     double fibonacciNumbers[51];
-
+    0
     for (int i = 0; i <= 50; i++) {
         fibonacciNumbers[i] = getFibonacciNumber(i);
     }

@@ -10,7 +10,7 @@ void zp(int a, int b) {
     }
     // We now need to find the first number that is a power of 2 and is greater than a
     int num = 1;
-    while (num <= a) {
+    while (num < a) {
         num *= 2;
     }
     while (num <= b) {
