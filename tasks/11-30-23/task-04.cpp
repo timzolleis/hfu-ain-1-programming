@@ -6,7 +6,7 @@
 
 
 bool isPrime(int x) {
-    int max = sqrt(x);
+    double max = sqrt(x);
     for (int y = 2; y <= max; y++) {
         if (x % y == 0) {
             return false;
@@ -16,6 +16,6 @@ bool isPrime(int x) {
 }
 
 int main() {
-    int prime = 13;
+    int prime = 5622;
     isPrime(prime) ? printf("It's a prime number!") : printf("It's not a prime number!");
 }
