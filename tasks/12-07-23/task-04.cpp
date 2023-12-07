@@ -2,16 +2,7 @@
 // Created by TimZolleis on 06.12.2023.
 //
 #include <cstdio>
-
-struct Date {
-    int day;
-    enum month {
-        January, February, March, April, May, June, July, August, September, October, November, December
-    };
-    Date::month month;
-    int year;
-
-};
+#include "types/date.h"
 
 bool before(const Date &dateA, const Date &dateB) {
     //Check years
