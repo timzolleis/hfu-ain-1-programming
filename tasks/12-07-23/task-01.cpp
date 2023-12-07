@@ -2,12 +2,7 @@
 //
 // Created by TimZolleis on 06.12.2023.
 //
-
-
-struct Punkt {
-    int x;
-    int y;
-};
+#include "types/point.hpp"
 
 int main() {
     Punkt p1 = {1, 2};

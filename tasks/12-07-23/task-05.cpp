@@ -2,11 +2,7 @@
 // Created by TimZolleis on 06.12.2023.
 //
 #include <cstdio>
-
-struct Vector {
-    float x;
-    float y;
-};
+#include "types/vector.hpp"
 
 
 float getScalar(const Vector &vectorA, const Vector &vectorB) {

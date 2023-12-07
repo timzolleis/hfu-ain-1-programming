@@ -3,13 +3,7 @@
 //
 #include <cstring>
 #include <cstdio>
-#include "types/date.hpp"
-struct Person {
-    char firstName[100];
-    char lastName[100];
-    Date birthdate;
-};
-
+#include "types/person.hpp"
 
 void fillPersons(Person array[]) {
     Person person1 = {"Rudolph", "Reindeer", {10, Date::April, 1900}};

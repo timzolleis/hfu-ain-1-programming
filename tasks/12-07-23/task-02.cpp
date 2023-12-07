@@ -4,11 +4,7 @@
 #include <cstdlib>
 #include <cstdio>
 #include "time.h"
-
-struct Punkt {
-    int x;
-    int y;
-};
+#include "types/point.hpp"
 
 
 int main() {
