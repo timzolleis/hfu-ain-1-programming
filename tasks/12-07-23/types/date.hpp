@@ -1,3 +1,6 @@
+
+#ifndef HFU_AIN_1_PROGRAMMING_DATE_HPP
+#define HFU_AIN_1_PROGRAMMING_DATE_HPP
 struct Date {
     int day;
     enum month {
@@ -7,3 +10,4 @@ struct Date {
     int year;
 
 };
+#endif //HFU_AIN_1_PROGRAMMING_DATE_HPP

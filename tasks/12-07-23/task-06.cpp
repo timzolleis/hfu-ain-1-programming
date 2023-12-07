@@ -4,6 +4,7 @@
 #include <cstring>
 #include <cstdio>
 #include "types/person.hpp"
+#include "types/date.hpp"
 
 void fillPersons(Person array[]) {
     Person person1 = {"Rudolph", "Reindeer", {10, Date::April, 1900}};
