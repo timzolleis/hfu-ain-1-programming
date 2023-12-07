@@ -16,6 +16,6 @@ bool isPrime(int x) {
 }
 
 int main() {
-    int prime = 5623;
+    int prime = 13;
     isPrime(prime) ? printf("It's a prime number!") : printf("It's not a prime number!");
 }

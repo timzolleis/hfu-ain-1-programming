@@ -4,15 +4,15 @@
 #include <cstdio>
 #include "types/date.hpp"
 void printDateWithCopy(Date d) {
-    printf("Your date: %i.%u.%i\n", d.day, d.month +1, d.year);
+    printf("Your date: %i.%u.%i\n", d.day, d.month, d.year);
 }
 
 void printDateWithReference(Date &d) {
-    printf("Your date: %i.%u.%i\n", d.day, d.month +1, d.year);
+    printf("Your date: %i.%u.%i\n", d.day, d.month, d.year);
 }
 
 void printDateWithPointer(Date *d) {
-    printf("Your date: %i.%u.%i\n", d->day, d->month +1, d->year);
+    printf("Your date: %i.%u.%i\n", d->day, d->month, d->year);
 }
 
 int main(){

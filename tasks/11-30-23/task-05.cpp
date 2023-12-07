@@ -14,7 +14,7 @@ int calculateWords(const char *s) {
     }
     int words = 0;
     while (*ps != '\0') {
-        if (isspace(*ps) != 0) {
+        if (isspace(*ps) != 0 && isspace(*(ps + 1)) == 0) {
             words++;
         }
         ps++;

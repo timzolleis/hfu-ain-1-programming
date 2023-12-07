@@ -22,8 +22,8 @@ int main() {
             printf("digits[j-1], %i\n", digits[j - 1]);
             printf("result: %i\n", digits[5 - j]);
         }
-        // 2 + 1 = 3
-        //...
+        // 2 + 1 = 3 --> 3 1 3 2 6
+        //
     }
 }
 

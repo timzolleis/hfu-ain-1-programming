@@ -30,7 +30,7 @@ void findBirthdate(const char *firstName, const char *lastName, Person persons[]
         if (matchFirstname == 0 && matchLastname == 0) {
             hasMatch = true;
             printf("%s %s was born at %i.%u.%i", person.firstName, person.lastName, person.birthdate.day,
-                   person.birthdate.month + 1, person.birthdate.year);
+                   person.birthdate.month, person.birthdate.year);
         }
     }
     if (!hasMatch) {
@@ -43,11 +43,14 @@ void trimNewline(char *str) {
     str[strcspn(str, "\n")] = 0;
 }
 
+
 int main() {
     char firstName[100];
     char lastName[100];
     Person persons[5];
     fillPersons(persons);
+    int count = sizeof(persons) / sizeof(persons[0]);
+    printf("Number of people, %i", count);
     printf("Please enter the first name: \n");
     fgets(firstName, 99, stdin);
     printf("Please enter the last name: \n");
