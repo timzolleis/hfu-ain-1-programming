@@ -2,7 +2,7 @@
 // Created by TimZolleis on 06.12.2023.
 //
 #include <cstdio>
-#include "types/date.h"
+#include "types/date.hpp"
 
 bool before(const Date &dateA, const Date &dateB) {
     //Check years
