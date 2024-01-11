@@ -27,8 +27,10 @@ private:
     static void printIntErrorMessage(const char* condition, int actual, int expected);
     static void printBoolErrorMessage(const char* condition, bool actual, bool expected);
 public:
-    static void assertInt(int value, TEST_INT_CONDITION condition, int expected);
-    static void assertBoolean(bool value, TEST_BOOL_CONDITION condition, bool expected);
+    static void assert(bool value, TEST_BOOL_CONDITION condition, bool expected);
+    static void assert(int value, TEST_INT_CONDITION condition, int expected);
+
+
     static void printSummary();
 };
 

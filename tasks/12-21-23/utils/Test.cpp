@@ -16,7 +16,7 @@ int Test::failed = 0;
 
 
 /* Main assertions */
-void Test::assertInt(int value, TEST_INT_CONDITION condition, int expected) {
+void Test::assert(int value, TEST_INT_CONDITION condition, int expected) {
     const char *conditionAsString = getIntConditionAsString(condition);
     addTotal();
     switch (condition) {
@@ -50,7 +50,7 @@ void Test::assertInt(int value, TEST_INT_CONDITION condition, int expected) {
 }
 
 
-void Test::assertBoolean(bool value, const TEST_BOOL_CONDITION condition, bool expected) {
+void Test::assert(bool value, const TEST_BOOL_CONDITION condition, bool expected) {
     const char* conditionString = getBoolConditionAsString(condition);
     addTotal();
     switch (condition) {

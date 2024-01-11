@@ -15,7 +15,7 @@ int main() {
     int valueAtPos10 = safeArray.getAt(10);
     int minimumValue = safeArray.getMinimum();
     //We assert that the minimum value must be 1
-    Test::assertInt(minimumValue, EQUALS, valueAtPos10);
+    Test::assert(minimumValue, EQUALS, 1);
     //Fill the array from 15-20 with another value
     safeArray.fill(10, 20, 50);
     //If we not get at index 15, it should be 50
@@ -23,12 +23,12 @@ int main() {
     //We assert that the value at index 15-20 is now 50
     for (int i = 0; i <= 5; i++) {
         int value = safeArray.getAt(i + 15);
-        Test::assertInt(value, EQUALS, 50);
+        Test::assert(value, EQUALS, 50);
     };
     //Get a value that is out of bounds
     int outOfBounds = safeArray.getAt(99);
     bool isOutOfBounds = SafeArray::checkValue(outOfBounds, false);
-    Test::assertBoolean(isOutOfBounds, IS, true);
+    Test::assert(isOutOfBounds, IS, true);
     //Print our test summary
     Test::printSummary();
     return 0;
