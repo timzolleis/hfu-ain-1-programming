@@ -8,10 +8,10 @@
 class SafeArray {
 private:
     int getSize();
-    bool isSet[100];
-    int elements[100];
+    bool isSet[100]{};
+    int elements[100]{};
 public:
-    SafeArray(int init);
+    explicit SafeArray(int init);
     bool setAt(unsigned int pos, int val);
 
     int getAt(unsigned int pos);

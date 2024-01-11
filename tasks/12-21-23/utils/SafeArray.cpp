@@ -9,7 +9,7 @@ int SafeArray::getSize() {
 }
 
 int SafeArray::getAt(unsigned int pos) {
-    if (pos > 99 || isSet[pos] == false) {
+    if (pos > 99 || !isSet[pos]) {
         return -999;
     }
     return elements[pos];
@@ -48,7 +48,7 @@ bool SafeArray::fill(unsigned int pos1, unsigned int pos2, int value) {
     if (pos1 > 99 || pos2 > 99) {
         return false;
     }
-    for (int i = pos1; i <= pos2; i++) {
+    for (unsigned int i = pos1; i <= pos2; i++) {
         elements[i] = value;
     }
     return true;
