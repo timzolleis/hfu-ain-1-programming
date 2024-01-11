@@ -13,7 +13,7 @@ private:
 public:
     explicit SafeArray(int init);
     bool setAt(unsigned int pos, int val);
-
+    static bool checkValue(int value, bool print);
     int getAt(unsigned int pos);
     int getMinimum();
     bool fill(unsigned int pos1, unsigned pos2, int value);

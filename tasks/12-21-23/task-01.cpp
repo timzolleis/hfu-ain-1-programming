@@ -25,6 +25,10 @@ int main() {
         int value = safeArray.getAt(i + 15);
         Test::assertInt(value, EQUALS, 50);
     };
+    //Get a value that is out of bounds
+    int outOfBounds = safeArray.getAt(99);
+    bool isOutOfBounds = SafeArray::checkValue(outOfBounds, false);
+    Test::assertBoolean(isOutOfBounds, IS, true);
     //Print our test summary
     Test::printSummary();
     return 0;

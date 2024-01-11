@@ -3,6 +3,7 @@
 // Created by TimZolleis on 14.12.2023.
 //
 #include "../types/SafeArray.h"
+#include <cstdio>
 
 int SafeArray::getSize() {
     return sizeof(*elements) / sizeof(int);
@@ -50,6 +51,16 @@ bool SafeArray::fill(unsigned int pos1, unsigned int pos2, int value) {
     }
     for (unsigned int i = pos1; i <= pos2; i++) {
         elements[i] = value;
+    }
+    return true;
+}
+
+bool SafeArray::checkValue(int value, bool print = false) {
+    if (value == -999) {
+        if (print) {
+            fprintf(stderr, "INDEX OUT OF BOUNDS \n");
+        }
+        return false;
     }
     return true;
 }
