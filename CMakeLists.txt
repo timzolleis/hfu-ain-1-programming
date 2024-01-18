@@ -10,10 +10,10 @@ project(12_14_23_task02)
 include_directories(tasks/12-14-23/types)
 
 # Add executable for the first project
-add_executable(12_14_23_task02
+add_executable(tasks_12_24_23_01
         tasks/12-14-23/types/stack.h
         tasks/12-14-23/utils/stack.cpp
-        tasks/12-14-23/task-02.cpp
+        tasks/12-14-23/task-01.cpp
 )
 
 # Separate project for 12_21_23_task01
@@ -23,10 +23,21 @@ project(12_21_23_task01)
 include_directories(tasks/12-21-23/types)
 
 # Add executable for the second project
-add_executable(12_21_23_task01
-        tasks/12-21-23/types/SafeArray.h
+add_executable(tasks_12_21_23_01
         tasks/12-21-23/utils/SafeArray.cpp
         tasks/12-21-23/task-01.cpp
         tasks/12-21-23/utils/Test.cpp
-        tasks/12-21-23/types/Test.h
+)
+
+# Project for tic tac toe
+# Include directories for the project
+include_directories(projects/tic-tac-toe)
+
+add_executable(projects_tic_tac_toe
+projects/tic-tac-toe/main.cpp
+projects/tic-tac-toe/spielfeld.cpp
+        projects/tic-tac-toe/utils/validation.cpp
+        projects/tic-tac-toe/utils/validation.h
+        projects/tic-tac-toe/utils/player.cpp
+        projects/tic-tac-toe/utils/player.h
 )
