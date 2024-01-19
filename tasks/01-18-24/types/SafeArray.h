@@ -7,14 +7,19 @@
 
 class SafeArray {
 private:
-    int getSize();
-    bool isSet[100]{};
-    int elements[100]{};
+    int size;
+    bool* isSet;
+    int* elements;
+    void increaseSize(int newLength);
+    bool isOutOfBounds(int index);
+    bool isInitialized();
 public:
     explicit SafeArray(int init);
-    bool setAt(unsigned int pos, int val);
+    SafeArray();
+    int length() const;
+    bool setAt(int index, int val);
     static bool checkValue(int value, bool print);
-    int getAt(unsigned int pos);
+    int getAt(int pos);
     int getMinimum();
     bool fill(unsigned int index1, unsigned index2, int value);
 };

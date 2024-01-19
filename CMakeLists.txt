@@ -41,3 +41,14 @@ projects/tic-tac-toe/spielfeld.cpp
         projects/tic-tac-toe/utils/player.cpp
         projects/tic-tac-toe/utils/player.h
 )
+
+
+# Project for task 12-12-23
+project(01-18-24_task01)
+
+include_directories(tasks/01-18-24/types)
+
+add_executable(tasks_01_18_24_01
+tasks/01-18-24/utils/SafeArray.cpp
+tasks/01-18-24/task-01.cpp
+tasks/01-18-24/utils/Test.cpp)
